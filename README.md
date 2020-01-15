@@ -196,6 +196,13 @@ There are two pieces to the simulation, the `producer` and `consumer`. As you de
 
 However, when you are ready to verify the end-to-end system prior to submission, it is critical that you open a terminal window for each piece and run them at the same time. **If you do not run both the producer and consumer at the same time you will not be able to successfully complete the project**.
 
+### compatibility setting
+```bash
+curl -X PUT -H "Content-Type: application/vnd.schemaregistry.v1+json" \
+    --data '{"compatibility": "NONE"}' \
+    http://0.0.0.0:8081/config
+```
+
 #### To run the `producer`:
 
 1. `cd producers`
